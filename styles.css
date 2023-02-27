@@ -1,0 +1,137 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#4671ea, #ac34e7);
+  padding: 0 20px;
+}
+
+form {
+  max-width: 550px;
+  width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+form .input-box {
+  display: flex;
+  height: 55px;
+  align-items: center;
+  position: relative;
+}
+
+form .input-box input {
+  height: 100%;
+  outline: none;
+  border: 2px solid #bfbfbf;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 45px;
+  transition: all 0.3s ease;
+}
+
+.input-box input.input {
+  width: 75%;
+  margin-right: 20px;
+}
+
+form.valid .input-box input.input {
+  border-color: #4671ea;
+}
+
+form.error .input-box input.input {
+  border-color: #de0611;
+}
+
+.input-box input.input:focus {
+  border-color: #4671ea;
+}
+
+.input-box input.button {
+  width: 25%;
+  padding: 0;
+  color: #fff;
+  background-color: #4671ea;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-box input.button:hover {
+  background-color: #1748cf;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.input-box i.mail-icon {
+  color: #bfbfbf;
+  left: 15px;
+  transition: all 0.3s ease;
+}
+
+form.valid .input-box i.mail-icon {
+  color: #1748cf;
+}
+
+form.error .input-box i.mail-icon {
+  color: #de0611;
+}
+
+.input-box input.input:focus ~ i.mail-icon {
+  color: #4671ea;
+}
+
+.input-box i.error-icon,
+.input-box i.pass-icon {
+  color: #de0611;
+  left: calc(75% - 60px);
+  display: none;
+}
+
+.input-box i.error-icon {
+  display: none;
+}
+
+form.error i.error-icon {
+  display: block;
+}
+
+.input-box i.pass-icon {
+  color: #4671ea;
+}
+
+form.valid i.pass-icon {
+  display: block;
+}
+
+form .text {
+  color: #de0611;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0 -10px 2px;
+}
+
+form.valid .text {
+  color: #1748cf;
+}
